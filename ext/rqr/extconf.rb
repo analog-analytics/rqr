@@ -29,14 +29,14 @@ else
 end
 
 if have_header('jpeglib.h') && have_library('jpeg')
-  $CFLAGS += ' -DUSE_JPG'
+  $CPPFLAGS += ' -DUSE_JPG'
 end
 
 if have_header('png.h') && have_library('png')
-  $CFLAGS += ' -DUSE_PNG'
+  $CPPFLAGS += ' -DUSE_PNG'
 end
 
 if have_header('tiff.h') && have_library('tiff')
-  $CFLAGS += ' -DUSE_TIFF'
+  $CPPFLAGS += ' -DUSE_TIFF'
 end
 create_makefile('rqr/QR')
